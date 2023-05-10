@@ -1,0 +1,23 @@
+﻿@page
+@model KnowYourAge.Pages.IndexModel
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/custom.styles.css" asp-append-version="true" />
+}
+
+<div class="container mx-auto">
+    <h1 class="text-center mt-5 mb-4">Home Page</h1>
+    <div class="card bg-light mb-4 col-md-6 mx-auto">
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+                    <input type="date" class="form-control" id="dateOfBirth" name="Person.DateOfBirth" value="2023-01-01" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
