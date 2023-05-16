@@ -6,6 +6,7 @@ namespace KnowYourAge.Pages;
 public class ResultModel : PageModel
 {
     public int AgeInDays, AgeInWeeks, AgeInMonths, AgeInYears;
+    public bool IsLeapYear;
 
     public void OnGet(string dateOfBirth)
     {
@@ -18,5 +19,6 @@ public class ResultModel : PageModel
         AgeInWeeks = ageCalculator.GetAgeInWeeks(dob);
         AgeInMonths = ageCalculator.GetAgeInMonths(dob);
         AgeInYears = ageCalculator.GetAgeInYears(dob);
+        IsLeapYear = ageCalculator.IsLeapYear(dob);
     }
 }

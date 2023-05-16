@@ -6,8 +6,8 @@ public class AgeCalculatorTests
 {
     
     [Theory]
-    [InlineData("01-05-2023", 9)]
-    [InlineData("10-05-2022", 365)]
+    [InlineData("01-05-2023", 15)]
+    [InlineData("10-05-2022", 371)]
     public void GetAgeInDays_Returns_CorrectAge(string dateOfBirthString, int expectedAgeInDays)
     {
         // Arrange
@@ -36,6 +36,22 @@ public class AgeCalculatorTests
 
         // Assert
         Assert.Equal(expectedAgeInMonths, actualAgeInMonths);
+    }
+
+    [Theory]
+    [InlineData("25-12-2020", true)]
+    [InlineData("15-11-2021", false)]          
+    public void IsLeapYear_Returns_Correct_Result(string dateOfBirthString, bool expectedIsLeapYear)
+    {
+        // Arrange
+        var ageCalculator = new AgeCalculator();
+        var dateOfBirth = DateTime.Parse(dateOfBirthString);
+        
+        // Act
+        var actualIsLeapYear = ageCalculator.IsLeapYear(dateOfBirth);
+
+        // Assert
+        Assert.Equal(expectedIsLeapYear, actualIsLeapYear);
     }
 
 }
