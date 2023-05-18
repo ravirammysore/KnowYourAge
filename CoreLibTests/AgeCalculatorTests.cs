@@ -6,8 +6,8 @@ public class AgeCalculatorTests
 {
     
     [Theory]
-    [InlineData("01-05-2023", 15)]
-    [InlineData("10-05-2022", 371)]
+    [InlineData("01-05-2023", 17)]
+    [InlineData("18-05-2022", 365)]
     public void GetAgeInDays_Returns_CorrectAge(string dateOfBirthString, int expectedAgeInDays)
     {
         // Arrange
