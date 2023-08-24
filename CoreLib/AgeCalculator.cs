@@ -1,12 +1,12 @@
 ﻿namespace KnowYourAge.CoreLib;
 
-public class AgeCalculator
+public class AgeCalculator //simple comment
 {
     public int GetAgeInDays(DateTime dateOfBirth)
     {
         var today = DateTime.Today;
         var ageInDays = today.Subtract(dateOfBirth).Days;
-        return ageInDays;
+        return ageInDays; 
     }
 
     public int GetAgeInWeeks(DateTime dateOfBirth)
